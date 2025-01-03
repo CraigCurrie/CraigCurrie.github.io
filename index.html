@@ -1,7 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/Icon.png" type="image/png">
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <section id="about">
+    <h1 style="font-size: 40px;">Craig Currie</h1>
+    <img src="Images\PicOfMe.jpg" alt = "picture of me" style ="width:400px;height:400px;border-radius: 10px;">
+    <p style="text-align: center; margin: 5%;">I am a Computer Science student in my fourth year at Strathclyde University. Who is always up for an opportunity to develop my skills and experience.<br>
+    I first became interested in Computer Science/Software Engineering in 2017 when i was first introduced to coding in a high school elective class. My current interests are gaming, puzzles, skydiving and baking.
+    </p>
+  </section>
+
+ <section id="careerEvents">
+    <h2>My Career and Education Events</h2>
+    <div class="timeline-container">
+      <ul class="timeline-list">
+
+        <li>
+          <div class="event">
+            Passed third year of University <br> with distinction and an average of 74%.
+            <div class="tooltip">With a high of 86% in 'Foundations of Artificial Intelligence'.</div>
+          </div>
+          <div class="timeline-date"><h3>June 2024</h3></div> 
+        </li>
+
+
+        <li>
+          <div class="event">
+            Passed second year of University <br> with distinction and an average of 74%.
+          <div class="tooltip">With a high of 84% in 'Computer Systems and Architecture'.</div>
+          </div>
+          <div class="timeline-date"><h3>June 2023</h3></div> 
+        </li>
+
+        <li>
+          <div class="event">
+            Passed first year of University <br> with distinction and an average of 75%.
+          <div class="tooltip">With a high of 82% in 'Programming Foundations'.</div>
+          </div>
+          <div class="timeline-date"><h3>June 2022</h3></div> 
+        </li>
+        <li>
+          <div class="event">
+            Began studying computer science <br> at the university of Strathclyde.
+          <div class="tooltip">I enrolled in this degree after I graduated high school in 2021.</div>
+          </div>
+          <div class="timeline-date"><h3>August 2021</h3></div> 
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Work</h2>
+
+    <div class="work-subsection">
+      <h3>Personal Projects</h3>
+      <div class="project">
+        <h4>This Website</h4>
+        <p>I created a personal portfolio website to showcase and discuss the various projects I have developed. Additionally, the website serves as a platform to provide a brief introduction about myself. </p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+        <div class="project-details">
+            <p>I decided to create this website after realizing that most of my projects were stored in private GitLab repositories as part of university coursework and were not accessible on GitHub. I wanted a platform where I could provide more extensive details about these projects, including insights into their development and the lessons I learned along the way.
+            <br><br>
+            To start, I researched hosting options and chose GitHub Pages because it met my requirements of being free, easy to set up, and seamlessly integrated with GitHub, aligning with the website’s purpose.
+            <br><br>
+            For the design process, I began by creating a wireframe to outline the site’s layout. I then applied the web development skills I had gained at university to implement the template based on this wireframe. After completing the structure, I added detailed information about myself and my projects.
+            <br><br>
+            During this process, I identified areas for improvement. For example, the education section was initially designed as a vertical list, but I found this layout took up too much space and shifted focus away from the work section. I revised it into a horizontal timeline, which improved the visual balance of the site.
+            <br><br>
+            Overall, I am pleased with how the website turned out and plan to continue improving and expanding it in the future.
+            </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <h4>Chess Game With AI Player</h4>
+        <p>During my third-year course, 'Foundations of Artificial Intelligence,' I was tasked with creating an AI player for the game of NIM using the MINIMAX algorithm. This experience sparked a strong interest in designing and implementing AI players. Motivated by this newfound interest, I decided to pursue a personal project to further explore and apply these concepts.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+        <div class="project-details">
+            <p>I landed on chess for a couple reasons. First, I had previously participated in chess tournaments a few years ago, which I enjoyed. Second, during discussions with the lecturer, it was mentioned that some of the concepts we were learning would be better suited to more complex games like chess.
+            <br><br>
+            Initially, I intended to implement the AI player using full Monte Carlo tree rollouts. However, this approach proved unfeasible due to the nature of chess. The issue was that Monte Carlo rollouts rely on simulating random moves until the game reaches an end state. Unfortunately, chess rarely reaches an end state(other than stalemate) when random moves are chosen, making this approach ineffective.
+            <br><br>
+            To overcome this setback and complete the project, I decided to implement a more advanced heuristic approach using the MINIMAX algorithm with a search depth of 3. One example of the heuristics I added was evaluating piece development based on how many squares are 'threatened.'
+            <br><br>
+            My prior experience with chess proved invaluable when evaluating the effectiveness of my AI player. Overall, I am quite pleased with how this project turned out. It gave me practical experience in adapting to unforeseen challenges, and it’s also something I could demonstrate to family members, who were able to use and interact with it.</p>
+        </div> 
+      </div>
+    </div>
+
+    <div class="work-subsection">
+      <h3>University Projects</h3>
+      <div class="project">
+        <h4>Analysis of the VERIS Dataset</h4>
+        <p>This project involved formulating and answering a research question by analyzing the VERIS dataset, which details data breaches. The specific question I explored was: "What impact does the time of year have on the attack surface or pattern of data attacks according to the VERIS dataset?".
+        <br><br>
+        Unlike my previous software development projects, this was primarily a research and data analysis project. I thoroughly enjoyed the change of pace and was proud to achieve full marks for my work.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Matlab</span>
+          <span class="tag">Json</span>
+          <span class="tag">Data analysis</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+        <div class="project-details">
+            <p>During my analysis, I discovered some interesting patterns and events. One notable finding was a large data breach involving an application called 'MoveIt.' I identified this anomaly while examining data plotted by month. This breach was so substantial that it heavily skewed the data.
+            <br><br>
+            To address this issue, I re-ran the query, omitting all breaches that referenced 'MoveIt' in the summary and occurred in June 2023—the month of the breach. This adjustment produced more usable data, which I then plotted using MATLAB. One key observation was a spike in 'Error' incidents (e.g., carelessness or accidental actions, such as handing out personal information to the wrong recipient) during the summer months.
+            <br><br>
+            After conducting further research, I was able to link this trend to a phenomenon in the medical field known as the 'July Effect.' This effect occurs when an influx of new medical residents and related factors lead to an increase in errors in hospitals and medical practices.
+            <br><br>
+            I particularly enjoyed the change of pace this research project offered compared to my usual software development-focused projects.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <h4>Concurrent Online Discussion System</h4>
+        <p>This project was particularly challenging for two main reasons. First, it heavily focused on concurrency, which was a concept I was relatively new to. Second, there were difficulties with group members not fully participating.
+        <br><br>  
+        The objective of the project was to develop concurrency-safe messaging software—similar in functionality to the app 'Discord'—using Java.</p>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Concurrency</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+        <div class="project-details">
+            <p>
+              At the beginning of this group project, the task was divided into two sections, each to be completed by a team of three. One section focused on implementing features for sending images, videos and others like webcam calls, while the other involved adding additional user features, such as a group chat.
+              <br><br>
+              Initially, I worked on the additional features section, which was relatively straightforward. The main challenge was ensuring concurrency safety—something new to me at the time. However, since it had been covered in lectures, I was able to grasp the concept without much difficulty.
+              <br><br>
+              However, problems arose, with the other half of the project. Due to a number of reasons, none of the three team members assigned to that section were able to contribute. When this issue came to light, I took the initiative to handle the abandoned section by myself, while the remaining team member focused on finalizing the features in the other part.
+              <br><br>
+              Completing the entire section on my own proved challenging, as it was my first time developing software to send and display files over a network. The most difficult aspect was implementing the ability for users to watch a video together in sync. This introduced several concurrency challenges, particularly around video controls.
+              <br><br>
+              After several late nights, I successfully completed and finalized this section, while also assisting with the final tasks for my initial part of the project. Ultimately, we achieved a mark of 85%, which I am especially proud of given the setbacks we faced.
+              <br><br>
+              Moving on I have changed how I tackle groupwork by increasing the number of progress checkups and focusing on the accountability of individual team members. I have achieved this by scheduling weekly group meetings with an additional informal call before the start of the week to outline tasks and goals for the week ahead. An example of this is a in person meeting on Wednesday to check up on progress and discuss any issues, as well as a brief call on Sunday to discuss plans for the week ahead. This has proved to be fairly effective so far.
+
+            </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <h4>Walking Pacer Web App</h4>
+        <p>This project involved developing a web app with a pace calculator, which performed a simple calculation based on data manually inputted by the user. The second part of the project focused on implementing a location tracker, allowing users to track and calculate the pace of their walks or runs in real time.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+        <div class="project-details">
+            <p>This project was relatively straightforward to implement, though it became more complex when developing the location tracker. This was my first experience accurately calculating distance moved and handling device permissions, which presented some initial challenges.
+            <br><br>
+            One significant hurdle I encountered was testing. While I could easily test the app by simulating sensor data, which produced correct results. However physical testing revealed issues, it was hard to pinpoint the cause of this but I eventually was able to narrow it down to a spotty connection.
+            <br><br>
+            To address this, I began by hypothesizing why the app was returning incorrect distances. I eventually concluded that poor connections led to less precise location data, causing the reported position to jump around within a small area even when the device hadn’t actually moved. This was fitting since the incorrect results were always greater than expected.
+            <br><br>
+            To resolve this, I modified my code to update the distance and starting location only when the device had moved beyond a certain threshold from the initial position. This adjustment largely resolved the issue and improved the app’s reliability during real-world testing.
+            <br><br>
+            Ultimately, I achieved a mark of 91% for this project, which I’m very proud of.
+          </p>
+        </div>
+      </div>
+
+      
+      <div class="project">
+        <h4>University Student Management System</h4>
+        <p>TThis project involved developing a university management system with three types of users: Students, Lecturers, and Managers, each having their own access levels and permissions within the system. The primary goal of the project was to learn and apply design methodologies to create a coherent and maintainable system.
+        </p>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">MySQL</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+        <div class="project-details">
+            <p>
+              The project began with a design phase, during which we created a class diagram, database structure, and system design. We then moved on to developing the management system, which was built using the Model-View-Controller (MVC) design methodology.
+              <br><br>
+              Implementing the MVC methodology proved to be quite challenging, as I initially found the concept poorly explained. This made it difficult to determine whether we were correctly following the methodology. To address this, I sought clarification from the lecturer, which significantly improved my understanding and confidence in applying it.
+              <br><br>
+              In terms of implementation, the process was relatively straightforward since we had already created a detailed system structure during the design phase. Only minor adjustments were required during development, allowing us to stay on track.
+              <br><br>
+              I received a mark of 70% for this project. While this was lower than my usual targets, I am overall pleased with the result, considering it was my first experience working with formal design methodologies.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <h4>Art Shop</h4>
+        <p>This project involved creating a shopping website that displayed available art pieces for sale and allowed users to place orders. It also included an admin section where the client could view current orders, add new art pieces, and manage order resolutions.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">MySQL</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+        <div class="project-details">
+            <p>This project was particularly interesting, as it involved developing a web store with features such as pagination, a shopping basket, and a dedicated page for the site owner to manage orders and inventory. These features were relatively straightforward to implement using local storage.
+            <br><br>
+            In addition to these core functionalities, the project requirements also included a somewhat vague request for "a strong artistic impression." I interpreted this as a need for a professionally presented website. To achieve this, I leveraged my knowledge of CSS and JavaScript to design a layout that uniformly showcased the artwork within the store. Users could also view additional information about each piece of art by hovering over them, adding an interactive touch to the site.
+            <br><br>
+            I was particularly pleased to receive a mark of 82% for this project, especially given its emphasis on professional design and presentation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: CraigCurrie118@gmail.com</p>
+    <p>Social: <a href="https://www.linkedin.com/in/craig-currie-224925334/">LinkedIn</a></p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const projects = document.querySelectorAll('.project');
+
+    projects.forEach((project) => {
+        project.addEventListener('click', function () {
+        const details = this.querySelector('.project-details');
+        const arrow = this.querySelector('.arrow-icon');
+
+        document.body.style.userSelect = 'none';
+
+        if (details.style.display === 'none' || details.style.display === '') {
+            details.style.display = 'block';
+            arrow.style.transform = 'rotate(180deg)';
+        } else {
+            details.style.display = 'none';
+            arrow.style.transform = 'rotate(0deg)';
+        }
+
+        setTimeout(function() {
+            document.body.style.userSelect = 'text'; 
+        }, 300); 
+        });
+    });
+    });
+
+
+  </script>
 </body>
 </html>

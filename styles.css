@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+  }
+  header a{
+    padding: 1em;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  
+  section {
+    text-align: center;
+    margin: 2em;
+    padding: 1em;
+  }
+  
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+.timeline-container {
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap; 
+    width: 80%;
+    margin: 1em auto;
+    padding: 1em 0;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+
+  }
+.timeline-container::-webkit-scrollbar {
+    height: 12px; 
+}
+
+.timeline-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; 
+
+  }
+
+.timeline-container::-webkit-scrollbar-thumb {
+    background: #c50025; 
+    border-radius: 10px; 
+    border: 2px solid #f1f1f1; 
+}
+
+.timeline-container::-webkit-scrollbar-thumb:hover {
+    background: #a60220; 
+    border: 2px solid #ddd; 
+}
+
+    .timeline-date {
+      margin-top: 10px;
+      font-style: italic;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+  .timeline-list {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+  }
+  
+  .timeline-list::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    z-index: -1;
+  }
+  
+
+
+
+  .event{
+    flex: 0 0 200px; 
+    height: 100px; 
+    margin: 0 1em; 
+    background-color: #c50025;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    overflow-wrap: break-word;
+  }
+  
+  .timeline-list .event:hover {
+    transform: scale(1.05);
+  }
+  
+
+.tooltip {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%; 
+    min-height: 100px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
+    border-radius: 10px;
+    text-align: left; 
+    padding-left: 4%;
+    padding-right: 4%; 
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    line-height: 1.3; 
+    opacity: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+  }
+  
+  .timeline-list .event:hover .tooltip,
+  .timeline-list .event:focus .tooltip,   
+  .timeline-list .event:active .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+.work-subsection {
+    margin: 2em 0;
+    text-align: left;
+}
+
+.work-subsection h3 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #333;
+    text-align: center;
+}
+
+.project {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+}
+
+.project h4 {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+    color: #c50025;
+}
+
+.project p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-icon {
+  font-size: 18px;
+  color: #7f061c;
+  display: inline-block; 
+  transition: transform 0.3s ease; 
+  cursor: pointer;
+}
+  
+.project-details {
+  background-color: #f9f9f9;
+  display: none;
+  transition: all 0.3s ease; 
+}
+  
+.project.open .project-details {
+  display: block; 
+}
+  
+
+  
+.tag {
+  display: inline-block;
+  background-color: #db0129;
+  color: #ffffff;
+  border:2px solid #c10225;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tags { 
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+  
