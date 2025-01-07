@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="images/Icon.png" type="image/png">
+  <link rel="icon" href="Images/Icon.png" type="image/png">
 
 </head>
 <body>
 
   <section id="about">
     <h1 style="font-size: 40px;">Craig Currie</h1>
-    <img src="Images\PicOfMe.jpg" alt = "picture of me" style ="width:400px;height:400px;border-radius: 10px;">
+    <img src="Images\PicOfMe.jpg" alt = "picture of me" style ="width:70%; max-width:400px; min-width: 200px; border-radius: 10px;">
     <p style="text-align: center; margin: 5%;">I am a Computer Science student in my fourth year at Strathclyde University. Who is always up for an opportunity to develop my skills and experience.<br>
     I first became interested in Computer Science/Software Engineering in 2017 when i was first introduced to coding in a high school elective class. My current interests are gaming, puzzles, skydiving and baking.
     </p>
@@ -233,6 +233,59 @@
   </footer>
 
   <script>
+document.addEventListener('DOMContentLoaded', function () { 
+    const tooltips = document.querySelectorAll('.tooltip'); 
+    let activeTooltip = null; 
+
+    function toggleTooltip(tooltip) {
+        const isVisible = tooltip.classList.contains('visible');
+
+
+        if (activeTooltip && activeTooltip !== tooltip) {
+            activeTooltip.classList.remove('visible');
+        }
+
+        if (isVisible) {
+            tooltip.classList.remove('visible'); 
+            activeTooltip = null;
+        } else {
+            tooltip.classList.add('visible'); 
+            activeTooltip = tooltip;
+        }
+    }
+
+    const events = document.querySelectorAll('.event');
+    events.forEach(event => {
+        const tooltip = event.querySelector('.tooltip');
+
+        event.addEventListener('click', function (e) {
+            toggleTooltip(tooltip); 
+            e.stopPropagation(); 
+        });
+
+        event.addEventListener('mouseenter', function () {
+            tooltip.classList.add('visible');
+        });
+
+        event.addEventListener('mouseleave', function () {
+            if (tooltip !== activeTooltip) {
+                tooltip.classList.remove('visible');
+            }
+        });
+    });
+
+    document.addEventListener('click', function () {
+        if (activeTooltip) {
+            activeTooltip.classList.remove('visible');
+            activeTooltip = null;
+        }
+    });
+});
+
+
+
+
+
     document.addEventListener('DOMContentLoaded', function () {
     const projects = document.querySelectorAll('.project');
 
@@ -246,14 +299,30 @@
         if (details.style.display === 'none' || details.style.display === '') {
             details.style.display = 'block';
             arrow.style.transform = 'rotate(180deg)';
+            project.style.transform = 'scale(1.03)';
+            project.style.margin = '13% auto';
+
+
         } else {
             details.style.display = 'none';
             arrow.style.transform = 'rotate(0deg)';
+            project.style.transform = 'scale(1)';
+            project.style.margin = '5% auto';
+
         }
 
         setTimeout(function() {
             document.body.style.userSelect = 'text'; 
         }, 300); 
+        });
+
+        project.addEventListener('mouseenter', function () {
+            project.style.transform = 'scale(1.03)';
+        });
+
+        project.addEventListener('mouseleave', function () {
+            project.style.transform = 'scale(1)';
+
         });
     });
     });

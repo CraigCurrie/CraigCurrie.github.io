@@ -23,8 +23,8 @@ body {
   
   section {
     text-align: center;
-    margin: 2em;
-    padding: 1em;
+    margin: 6%;
+    padding: 3%;
   }
   
   a {
@@ -35,7 +35,7 @@ body {
     overflow-x: auto; 
     overflow-y: hidden; 
     white-space: nowrap; 
-    width: 80%;
+    width: 90%;
     margin: 1em auto;
     padding: 1em 0;
     position: relative;
@@ -117,9 +117,10 @@ body {
   .timeline-list .event:hover {
     transform: scale(1.05);
   }
+
   
 
-.tooltip {
+  .tooltip {
     position: absolute;
     top: 0%;
     left: 50%;
@@ -146,14 +147,18 @@ body {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 10;
-  }
-  
-  .timeline-list .event:hover .tooltip,
-  .timeline-list .event:focus .tooltip,   
-  .timeline-list .event:active .tooltip {
+}
+
+.timeline-list .event:hover .tooltip {
     opacity: 1;
     visibility: visible;
-  }
+}
+
+.tooltip.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
   
 .work-subsection {
     margin: 2em 0;
@@ -171,10 +176,10 @@ body {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 1em;
-    margin: 1em auto;
+    padding: 5%;
+    margin: 5% auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 90%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 
@@ -193,7 +198,7 @@ body {
 }
 
 .project:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
