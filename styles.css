@@ -3,16 +3,13 @@ body {
     margin: 0;
     padding: 0;
   }
-  
-  header {
-    background-color: #333;
-    color: #fff;
+  #aboutMe{
+    margin: 2% auto;
+    width: 80%;
     text-align: center;
-    padding: 1em;
+    font-size: 1.1em;
   }
-  header a{
-    padding: 1em;
-  }
+  
   footer {
     background-color: #333;
     color: #fff;
@@ -24,7 +21,7 @@ body {
   section {
     text-align: center;
     margin: 6%;
-    padding: 3%;
+    padding: 0%;
   }
   
   a {
